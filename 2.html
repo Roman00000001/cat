@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Возраст животных</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Возраст животных</div>
+        <button id="zoomButton" class="button">Версия для
+            слабовидящиx</button>
+        <style>
+            .zoom {
+                zoom: 2;
+                /* Увеличиваем масштаб в два раза */
+                -moz-transform: scale(1);
+                /* Поддержка Mozilla Firefox */
+                -webkit-transform: scale(1);
+                /* Поддержка Google Chrome и Safari */
+                -o-transform: scale(1);
+                /* Поддержка Opera */
+                -ms-transform: scale(1);
+                /* Поддержка Internet Explorer */
+            }
+        </style>
+        <script>
+            const zoomButton = document.getElementById('zoomButton');
+            zoomButton.addEventListener('click', function () {
+                document.body.classList.toggle('zoom');
+            });
+        </script>
+    </header>
+    <main>
+        <h1>Сколько лет твоему питомцу?</h1>
+        <div id="calculator">
+            <p>Введите возраст кошки</p>
+            <input class="catAge" type="text">
+            <input type="button" class="btn" value="Посчитать">
+            <p>Возраст кошки в человеческих годах</p>
+            <input class="humanCatAge" type="text">
+        </div>
+    </main>
+    <footer>@CTI Все права защищены</footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
